@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="{extension.name}" name="docsearch:name"/>
+<meta content="" name="docsearch:package_type"/>
+<meta content="{extension.version}" name="docsearch:release"/>
+<meta content="0.0" name="docsearch:version"/>
+<title>Introduction — {extension.name} {extension.version} documentation</title>
+<link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/css/webfonts.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/css/fontawesome.css" rel="stylesheet" type="text/css"/>
+<!-- linktags -->
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="#" rel="top" title="{extension.name} {extension.version} documentation"/>
+<link href="../Installation/Index.html" rel="next" title="Installation"/>
+<link href="../Index.html" rel="prev" title="Extension Name"/>
+<!-- /linktags -->
+<!-- extrahead --><!-- /extrahead -->
+<script src="../_static/js/modernizr.min.js"></script>
+</head>
+<body>
+<div class="page">
+<div class="page-header">
+<div class="page-header-inner">
+<!-- pageheader -->
+<a class="logo" href="https://docs.typo3.org/" title="TYPO3 Documentation">
+<img alt="TYPO3 Logo" class="logo-image" height="130" src="../_static/img/typo3-logo.svg" width="484"/>
+</a>
+<!-- /pageheader -->
+</div>
+</div>
+<div class="page-main">
+<div class="page-main-inner">
+<div class="page-main-navigation">
+<nav>
+<input class="toc-checkbox" id="toggleToc" type="checkbox"/>
+<div class="toc-header"><div class="toc-title">
+<a class="toc-title-project" href="../Index.html">{extension.name}</a></div><div class="toc-actions">
+<label class="toc-toggle" for="toggleToc">
+                                    Menu
+                                </label>
+</div>
+</div>
+<div class="toc-collapse">
+<!-- searchbox.html -->
+<div class="toc-search" id="searchbox" role="search">
+<form action="../search.html" autocomplete="off" id="search-form" method="get">
+<input aria-label="Search this project" class="form-control" id="searchinput" name="q" placeholder="Search this project" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<!-- /searchbox.html -->
+<div aria-label="main navigation" class="toc" role="navigation">
+<!-- menu -->
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/Index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/Index.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Inspecting/Index.html">Inspecting a page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Inspecting/TypoScript/Index.html">TypoScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Inspecting/Info/Index.html">Information about a page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Inspecting/Debug/Index.html">Debugging a page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Changelog/Index.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sitemap.html">Sitemap</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+<ul>
+<li><a class="reference internal" href="#">Introduction</a><ul>
+<li><a class="reference internal" href="#what-does-it-do">What does it do?</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+</div>
+</div>
+</nav>
+</div>
+<div class="page-main-content">
+<div class="rst-content">
+<!-- pager-hidden.html -->
+<a accesskey="p" class="no-focus" href="../Index.html" tabindex="-1"></a>
+<a accesskey="n" class="no-focus" href="../Installation/Index.html" tabindex="-1"></a>
+<!-- /pager-hidden.html -->
+<!-- breadcrumbs.html -->
+<div aria-label="breadcrumbs navigation" class="breadcrumb-bar" role="navigation">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="../Index.html">Start</a></li>
+<li aria-current="page" class="breadcrumb-item active">Introduction</li>
+</ol>
+<div class="breadcrumb-additions">
+<a class="btn btn-sm btn-light" href="../_sources/Introduction/Index.rst.txt" rel="nofollow">
+<span class="btn-icon"><span class="fas fa-code"></span></span>
+<span class="btn-text">View source</span>
+</a>
+</div>
+</div>
+<!-- /breadcrumbs.html -->
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<!-- body -->
+<div class="section" id="introduction">
+<span id="id1"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-does-it-do">
+<span id="what-it-does"></span><h2>What does it do?<a class="headerlink" href="#what-does-it-do" title="Permalink to this headline">¶</a></h2>
+<p>This extension displays a bar at the bottom of the screen on the frontend,
+from which you can access information per page.</p>
+<p>You can use it to simulate scenarios to test page content, for example, user
+groups, time-restricted content or showing hidden content. You can also use it
+for general debugging.</p>
+<p>The bar shows a summary of information about the page, including number of
+TypoScript messages, page load time, and a count of any errors and warnings.</p>
+<div class="figure" id="id2">
+<img alt="The admin panel bar" class="with-border" src="../_images/UIAdminPanelBar.png"/>
+<p class="caption"><span class="caption-text">The admin panel bar displays at the bottom of the page on the frontend</span></p>
+</div>
+<p>From the bar you can open a larger panel to access detailed information about
+the page.</p>
+<div class="figure" id="id3">
+<img alt="Three cascading screenshots of different pages of the admin panel" class="with-border" src="../_images/UIAdminPanel.png"/>
+<p class="caption"><span class="caption-text">A selection of screenshots showing different pages of the admin panel.</span></p>
+</div>
+<p>There is a switcher at the bottom right of the admin panel bar to turn it on
+and off for the page.</p>
+</div>
+</div>
+<!-- /body -->
+</div>
+</div>
+<!-- pager.html -->
+<nav aria-label="Page navigation example">
+<ul class="pagination justify-content-center">
+<li class="page-item">
+<a class="page-link" href="../Index.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+</li>
+<li class="page-item">
+<a class="page-link" href="../Installation/Index.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+</li>
+</ul>
+</nav>
+<!-- /pager.html -->
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer">
+<!-- footer.html -->
+<footer>
+<div class="frame frame-ruler-before frame-background-dark">
+<div class="frame-container">
+<div class="frame-inner">
+<div class="footer-additional">
+<p class="text-center">Last rendered: Feb 24, 2021 04:48</p>
+<p class="text-center">
+<a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" rel="nofollow noopener" target="_blank">
+                            TYPO3 Theme 4.2.1
+                        </a>
+</p>
+</div>
+<div class="footer-meta">
+<div class="footer-meta-copyright">
+                        © Copyright by {extension.extensionKey}
+                    </div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- /footer.html -->
+</div>
+</div>
+<script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../',
+            VERSION: '{extension.version}',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+<script src="../_static/js/jquery.min.js" type="text/javascript"></script>
+<script src="../_static/js/underscore.min.js" type="text/javascript"></script>
+<script src="../_static/js/doctools.min.js" type="text/javascript"></script>
+<script src="../_static/js/popper.min.js" type="text/javascript"></script>
+<script src="../_static/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../_static/js/theme.min.js" type="text/javascript"></script>
+<script src="../_static/language_data.js" type="text/javascript"></script>
+<script src="../_static/js/searchtools.min.js" type="text/javascript"></script>
+<script src="../_static/js/autocomplete.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+        jQuery(function() { Search.loadIndex("../searchindex.js"); });
+    </script>
+<script id="searchindexloader" type="text/javascript"></script>
+<!-- scripts2 --><!-- /scripts2 -->
+<!-- footer2 --><!-- /footer2 -->
+</body>
+</html>

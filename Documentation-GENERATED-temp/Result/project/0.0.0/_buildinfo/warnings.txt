@@ -1,0 +1,10 @@
+./Documentation/Index.rst:27: WARNING: Field list ends without a blank line; unexpected unindent.
+./Documentation/Index.rst:59: WARNING: toctree contains reference to nonexisting document u'Settings/Index'
+./Documentation/Inspecting/Debug/Index.rst:1: WARNING: Problems with "include" directive path:
+InputError: [Errno 2] No such file or directory: '/ALL/Makedir/SYMLINK_THE_PROJECT/Documentation/Inspecting/Includes.txt'.
+./Documentation/Inspecting/Info/Index.rst:1: WARNING: Problems with "include" directive path:
+InputError: [Errno 2] No such file or directory: '/ALL/Makedir/SYMLINK_THE_PROJECT/Documentation/Inspecting/Includes.txt'.
+./Documentation/Inspecting/TypoScript/Index.rst:1: WARNING: Problems with "include" directive path:
+InputError: [Errno 2] No such file or directory: '/ALL/Makedir/SYMLINK_THE_PROJECT/Documentation/Inspecting/Includes.txt'.
+./Documentation/Editor/Index.rst: WARNING: document isn't included in any toctree
+./Documentation/Extending/Index.rst: WARNING: document isn't included in any toctree
