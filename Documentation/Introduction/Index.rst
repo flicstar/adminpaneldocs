@@ -38,3 +38,10 @@ the page.
 
 There is a switcher at the bottom right of the admin panel bar to turn it on
 and off for the page.
+
+See it in action
+----------------
+
+This feature demo video from August 2018 shows the admin panel in action.
+
+.. youtube:: 8I7hRZ4VyAE
