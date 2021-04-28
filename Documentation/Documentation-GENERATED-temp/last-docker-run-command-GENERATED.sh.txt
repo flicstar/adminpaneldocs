@@ -1,0 +1,3 @@
+docker run --rm --user=1000:1000 \
+   -v /home/flicstar/github/adminpaneldocs/Documentation:/PROJECT:ro \
+   -v /home/flicstar/github/adminpaneldocs/Documentation/Documentation-GENERATED-temp:/RESULT t3docs/render-documentation:latest makehtml
