@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="{extension.name}" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="{extension.version}" />
+    <meta name="docsearch:version" content="0.0" />
+
+    <title>Extending the Admin Panel &mdash; {extension.name} {extension.version} documentation</title>
+
+    <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/webfonts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/fontawesome.css" />
+<!-- linktags -->
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="{extension.name} {extension.version} documentation" href="#" />
+    <link rel="next" title="Sitemap" href="../Sitemap.html" />
+    <link rel="prev" title="Settings" href="../Settings/Index.html" />
+<!-- /linktags -->
+<!-- extrahead --><!-- /extrahead -->
+    <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="page-header">
+            <div class="page-header-inner">
+<!-- pageheader -->
+<a href="https://docs.typo3.org/" title="TYPO3 Documentation" class="logo">
+    <img src="../_static/img/typo3-logo.svg" width="484" height="130" alt="TYPO3 Logo" class="logo-image" />
+</a>
+<!-- /pageheader -->
+            </div>
+        </div>
+
+        
+
+        <div class="page-main">
+            <div class="page-main-inner">
+                <div class="page-main-navigation">
+                    <nav>
+                        <input type="checkbox" id="toggleToc" class="toc-checkbox">
+                        <div class="toc-header"><div class="toc-title">
+                                    <a class="toc-title-project" href="../Index.html">{extension.name}</a></div><div class="toc-actions">
+                                <label for="toggleToc" class="toc-toggle">
+                                    Menu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="toc-collapse">
+<!-- searchbox.html -->
+<div id="searchbox" class="toc-search" role="search">
+    <form id="search-form" action="../search.html" autocomplete="off" method="get">
+        <input class="form-control" type="text" name="q" placeholder="Search this project" aria-label="Search this project" id="searchinput" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<!-- /searchbox.html -->
+                            <div class="toc" role="navigation" aria-label="main navigation">
+<!-- menu -->
+                                        <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Installation/Index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Configuration/Index.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Inspecting/Index.html">Inspecting a page</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Inspecting/TypoScript/Index.html">TypoScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Inspecting/Info/Index.html">Information about a page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Inspecting/Debug/Index.html">Debugging a page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Settings/Index.html">Settings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Extending the Admin Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Sitemap.html">Sitemap</a></li>
+</ul>
+
+                                    <p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+                                    <ul>
+<li><a class="reference internal" href="#">Extending the Admin Panel</a><ul>
+<li><a class="reference internal" href="#creating-additional-modules">Creating additional modules</a></li>
+<li><a class="reference internal" href="#to-create-your-own-admin-panel-module">To create your own Admin Panel module</a></li>
+<li><a class="reference internal" href="#adding-a-sub-module">Adding a sub-module</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-main-content">
+                    <div class="rst-content">
+<!-- pager-hidden.html -->
+
+        <a class="no-focus" accesskey="p" href="../Settings/Index.html" tabindex="-1"></a>
+        <a class="no-focus" accesskey="n" href="../Sitemap.html" tabindex="-1"></a>
+<!-- /pager-hidden.html -->
+<!-- breadcrumbs.html -->
+<div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../Index.html">Start</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Extending the Admin Panel</li>
+    </ol>
+        <div class="breadcrumb-additions">
+                <a class="btn btn-sm btn-light" href="../_sources/Extending/Index.rst.txt" rel="nofollow">
+                    <span class="btn-icon"><span class="fas fa-code"></span></span>
+                    <span class="btn-text">View source</span>
+                </a>
+        </div>
+</div>
+<!-- /breadcrumbs.html -->
+                        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <div itemprop="articleBody">
+<!-- body -->
+    <div class="section" id="extending-the-admin-panel">
+<span id="extending"></span><h1>Extending the Admin Panel<a class="headerlink" href="#extending-the-admin-panel" title="Permalink to this headline">¶</a></h1>
+<p>With EXT:fe_edit you can extend the Admin Panel.</p>
+<p>Extension authors can write their own modules or add submodules to existing
+modules.</p>
+<div class="section" id="creating-additional-modules">
+<h2>Creating additional modules<a class="headerlink" href="#creating-additional-modules" title="Permalink to this headline">¶</a></h2>
+<p>An admin panel module commonly has:</p>
+<ul class="simple">
+<li>An icon, an identifier, a short info and a label</li>
+<li>initializeModule and onSubmit methods for initialization (done early in the
+TYPO3 Request) and for reacting to changes (onSubmit is executed when the
+settings are updated)</li>
+<li>Settings that influence page rendering or page display</li>
+<li>Methods to provide custom CSS and JavaScript files</li>
+<li>Submodules</li>
+</ul>
+</div>
+<div class="section" id="to-create-your-own-admin-panel-module">
+<h2>To create your own Admin Panel module<a class="headerlink" href="#to-create-your-own-admin-panel-module" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Create a new PHP class extending
+<code class="code docutils literal notranslate"><span class="pre">\TYPO3\CMS\Adminpanel\Modules\AbstractModule</span></code>.</p>
+</li>
+<li><p class="first">Implement at least the following methods:</p>
+<ul class="simple">
+<li><code class="code docutils literal notranslate"><span class="pre">getIdentifier</span></code> - A unique identifier for your module. For example
+<code class="code docutils literal notranslate"><span class="pre">mynamespace_modulename</span></code></li>
+<li><code class="code docutils literal notranslate"><span class="pre">getIconIdentifier</span></code> - An icon identifier which is resolved via the icon
+API. Make sure to use a registered icon here.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">getLabel</span></code> - Speaking label for the module. You can access language
+files via <code class="code docutils literal notranslate"><span class="pre">$this-&gt;getLanguageService()</span></code></li>
+<li><code class="code docutils literal notranslate"><span class="pre">getShortInfo</span></code> - Displayed next to the module label, may contain
+aggregated infos (such as <code class="code docutils literal notranslate"><span class="pre">Total</span> <span class="pre">Parse</span> <span class="pre">Time:</span> <span class="pre">200ms</span></code>)</li>
+</ul>
+</li>
+<li><p class="first">Register your module by adding the following in your <code class="code docutils literal notranslate"><span class="pre">ext_localconf.php</span></code></p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;TYPO3_CONF_VARS&#39;</span><span class="p">][</span><span class="s1">&#39;EXTCONF&#39;</span><span class="p">][</span><span class="s1">&#39;adminpanel&#39;</span><span class="p">][</span><span class="s1">&#39;modules&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;mynamespace_modulename&#39;</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;module&#39;</span> <span class="o">=&gt;</span>
+<span class="nx">\Your\Namespace\Adminpanel\Modules\YourModule</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+<span class="s1">&#39;before&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;cache&#39;</span><span class="p">],</span>
+<span class="p">],</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Using <code class="code docutils literal notranslate"><span class="pre">before</span></code> or <code class="code docutils literal notranslate"><span class="pre">after</span></code> you can influence where your module will be
+displayed in the module menu by referencing the identifier / array key of
+other modules.</p>
+<p>Modules themselves do provide settings for the page rendering and global
+actions (like preview settings, clearing caches or adding action buttons for
+editing the page) but do not provide further content.</p>
+<p>If you want to display additional content in the Admin Panel (like rendering
+times or backtraces), you have to add a submodule to your main module.</p>
+<p>To provide settings in a module, implement the method <code class="code docutils literal notranslate"><span class="pre">getSettings</span></code>, which has
+to return rendered HTML form elements (but without the form tag), ready to be
+used in the Admin Panel main form.</p>
+</div>
+<div class="section" id="adding-a-sub-module">
+<h2>Adding a sub-module<a class="headerlink" href="#adding-a-sub-module" title="Permalink to this headline">¶</a></h2>
+<p>An Admin Panel submodule has:</p>
+<ul class="simple">
+<li>An identifier and a label.</li>
+<li>initializeModule and onSubmit methods for initialization (done early in
+the TYPO3 Request) and reacting to changes (onSubmit is executed when the
+settings are updated).</li>
+<li>Module content (for example the Info submodules display information about
+the current page or server configuration).</li>
+<li>Settings influencing their module content (for example the TypoScript
+Time / Rendering sub module has settings that influence whether to display
+messages or not).</li>
+</ul>
+<p>As soon as a module has a submodule it will be displayed in the main Admin
+Panel. Modules without submodules may only provide settings, and are only
+displayed in the Settings overview.</p>
+<p>Adding a submodule is similar to adding a module.</p>
+<ol class="arabic">
+<li><p class="first">First, create a new class that extends <code class="code docutils literal notranslate"><span class="pre">AbstractSubModule</span></code>. Implement at
+least the following methods:</p>
+<ul class="simple">
+<li><code class="code docutils literal notranslate"><span class="pre">getIdentifier</span></code> - A unique identifier for your sub module (for example
+<code class="code docutils literal notranslate"><span class="pre">submodulename</span></code>)</li>
+<li><code class="code docutils literal notranslate"><span class="pre">getLabel</span></code> - Speaking label for the module - you can access language
+files via <code class="code docutils literal notranslate"><span class="pre">$this-&gt;getLanguageService()</span></code></li>
+<li><code class="code docutils literal notranslate"><span class="pre">getContent</span></code> - The rendered HTML content for your module</li>
+</ul>
+</li>
+<li><p class="first">Register your sub module by adding the following in your
+<code class="code docutils literal notranslate"><span class="pre">ext_localconf.php</span></code></p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;TYPO3_CONF_VARS&#39;</span><span class="p">][</span><span class="s1">&#39;EXTCONF&#39;</span><span class="p">][</span><span class="s1">&#39;adminpanel&#39;</span><span class="p">][</span><span class="s1">&#39;modules&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;mynamespace_modulename&#39;</span><span class="p">][</span><span class="s1">&#39;submodules&#39;</span><span class="p">][</span><span class="s1">&#39;submodulename&#39;</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="p">[</span>
+<span class="s1">&#39;module&#39;</span><span class="o">=&gt;</span><span class="nx">\Your\Namespace\Adminpanel\Modules\YourModule\Submodule</span><span class="o">::</span><span class="na">class</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Where <code class="code docutils literal notranslate"><span class="pre">mynamespace_modulename</span></code> references the main module where you want to
+add your submodule, and <code class="code docutils literal notranslate"><span class="pre">submodulename</span></code> is the identifier of your sub module.
+This way, you can also register new custom sub modules to existing main
+modules.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>You can find examples for main and sub modules and their registration in the
+Admin Panel extension. Short ones for a quick look are:</p>
+<ul class="simple">
+<li><code class="code docutils literal notranslate"><span class="pre">adminpanel/Classes/Modules/Info/PhpInformation.php</span></code> (Submodule)</li>
+<li><code class="code docutils literal notranslate"><span class="pre">adminpanel/Classes/Modules/InfoModule.php</span></code> (Main module, serves as
+submodule wrapper only)</li>
+<li><code class="code docutils literal notranslate"><span class="pre">adminpanel/Classes/Modules/EditModule.php</span></code> (Main module, custom rendering
+settings)</li>
+</ul>
+</div>
+</div>
+
+<!-- /body -->
+                            </div>
+                        </div>
+<!-- pager.html -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="../Settings/Index.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="../Sitemap.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+<!-- /pager.html -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="page-footer">
+<!-- footer.html -->
+<footer>
+    <div class="frame frame-ruler-before frame-background-dark">
+        <div class="frame-container">
+            <div class="frame-inner">
+                <div class="footer-additional">
+                    <p class="text-center">Last rendered: Apr 28, 2021 04:16</p>
+                    <p class="text-center">
+                        <a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" rel="nofollow" target="_blank">
+                            TYPO3 Theme 4.2.1
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-meta">
+                    <div class="footer-meta-copyright">
+                        &copy; Copyright by {extension.extensionKey}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /footer.html -->
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../',
+            VERSION: '{extension.version}',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="../_static/js/doctools.min.js"></script>
+    <script type="text/javascript" src="../_static/js/popper.min.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/js/theme.min.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/js/searchtools.min.js"></script>
+    <script type="text/javascript" src="../_static/js/autocomplete.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function() { Search.loadIndex("../searchindex.js"); });
+    </script>
+    <script type="text/javascript" id="searchindexloader"></script>
+<!-- scripts2 --><!-- /scripts2 -->
+<!-- footer2 --><!-- /footer2 -->
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="{extension.name}" name="docsearch:name"/>
+<meta content="" name="docsearch:package_type"/>
+<meta content="{extension.version}" name="docsearch:release"/>
+<meta content="0.0" name="docsearch:version"/>
+<title>Debugging a page — {extension.name} {extension.version} documentation</title>
+<link href="../../_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/css/webfonts.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/css/fontawesome.css" rel="stylesheet" type="text/css"/>
+<!-- linktags -->
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="#" rel="top" title="{extension.name} {extension.version} documentation"/>
+<link href="../Index.html" rel="up" title="Inspecting a page"/>
+<link href="../../Settings/Index.html" rel="next" title="Settings"/>
+<link href="../Info/Index.html" rel="prev" title="Information about a page"/>
+<!-- /linktags -->
+<!-- extrahead --><!-- /extrahead -->
+<script src="../../_static/js/modernizr.min.js"></script>
+</head>
+<body>
+<div class="page">
+<div class="page-header">
+<div class="page-header-inner">
+<!-- pageheader -->
+<a class="logo" href="https://docs.typo3.org/" title="TYPO3 Documentation">
+<img alt="TYPO3 Logo" class="logo-image" height="130" src="../../_static/img/typo3-logo.svg" width="484"/>
+</a>
+<!-- /pageheader -->
+</div>
+</div>
+<div class="page-main">
+<div class="page-main-inner">
+<div class="page-main-navigation">
+<nav>
+<input class="toc-checkbox" id="toggleToc" type="checkbox"/>
+<div class="toc-header"><div class="toc-title">
+<a class="toc-title-project" href="../../Index.html">{extension.name}</a></div><div class="toc-actions">
+<label class="toc-toggle" for="toggleToc">
+                                    Menu
+                                </label>
+</div>
+</div>
+<div class="toc-collapse">
+<!-- searchbox.html -->
+<div class="toc-search" id="searchbox" role="search">
+<form action="../../search.html" autocomplete="off" id="search-form" method="get">
+<input aria-label="Search this project" class="form-control" id="searchinput" name="q" placeholder="Search this project" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+<!-- /searchbox.html -->
+<div aria-label="main navigation" class="toc" role="navigation">
+<!-- menu -->
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/Index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Configuration/Index.html">Configuration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Index.html">Inspecting a page</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../TypoScript/Index.html">TypoScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Info/Index.html">Information about a page</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Debugging a page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Settings/Index.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Extending/Index.html">Extending the Admin Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Sitemap.html">Sitemap</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+<ul>
+<li><a class="reference internal" href="#">Debugging a page</a><ul>
+<li><a class="reference internal" href="#events">Events</a></li>
+<li><a class="reference internal" href="#log">Log</a></li>
+<li><a class="reference internal" href="#page-title">Page title</a></li>
+<li><a class="reference internal" href="#query-information">Query Information</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+</div>
+</div>
+</nav>
+</div>
+<div class="page-main-content">
+<div class="rst-content">
+<!-- pager-hidden.html -->
+<a accesskey="p" class="no-focus" href="../Info/Index.html" tabindex="-1"></a>
+<a accesskey="n" class="no-focus" href="../../Settings/Index.html" tabindex="-1"></a>
+<!-- /pager-hidden.html -->
+<!-- breadcrumbs.html -->
+<div aria-label="breadcrumbs navigation" class="breadcrumb-bar" role="navigation">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="../../Index.html">Start</a></li>
+<li class="breadcrumb-item"><a href="../Index.html">Inspecting a page</a></li>
+<li aria-current="page" class="breadcrumb-item active">Debugging a page</li>
+</ol>
+<div class="breadcrumb-additions">
+<a class="btn btn-sm btn-light" href="../../_sources/Inspecting/Debug/Index.rst.txt" rel="nofollow">
+<span class="btn-icon"><span class="fas fa-code"></span></span>
+<span class="btn-text">View source</span>
+</a>
+</div>
+</div>
+<!-- /breadcrumbs.html -->
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<!-- body -->
+<div class="section" id="debugging-a-page">
+<span id="debug"></span><h1>Debugging a page<a class="headerlink" href="#debugging-a-page" title="Permalink to this headline">¶</a></h1>
+<p>Click <span class="guilabel">Debug</span> on the Admin Panel bar to show general information
+about the page.</p>
+<div class="figure" id="id1">
+<img alt="The Events tab of the Debug section of the Admin Panel" class="with-border" src="../../_images/Events.png"/>
+<p class="caption"><span class="caption-text">The <strong>Events</strong> tab of the Debug section of the Admin Panel</span></p>
+</div>
+<p>There are four tabs in the <strong>Debug</strong> section.</p>
+<div class="section" id="events">
+<h2>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h2>
+<p>The Events list shows all events that were dispatched while the current page
+was rendered. A developer can use this list while extending TYPO3 to find out
+which event to use on any given page.</p>
+<p>Click the arrow to expand the details for an event to see basic information
+about the event’s parameters.</p>
+<div class="figure" id="id2">
+<img alt="An expanded event showing extra detail" class="with-border" src="../../_images/EventDetails.png"/>
+<p class="caption"><span class="caption-text">An expanded event showing extra detail</span></p>
+</div>
+</div>
+<div class="section" id="log">
+<h2>Log<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h2>
+<p>The log tab shows all log entries that were generated during the current
+request. You can adjust the log levels and grouping in the settings.</p>
+<p>Click the cog icon at the top right of the Admin Panel bar to configure the
+settings.</p>
+<div class="figure" id="id3">
+<img alt="The settings for the Log tab of the Admin Panel" class="with-border" src="../../_images/LogSettings.png"/>
+<p class="caption"><span class="caption-text">The settings for the Log entries</span></p>
+</div>
+</div>
+<div class="section" id="page-title">
+<h2>Page title<a class="headerlink" href="#page-title" title="Permalink to this headline">¶</a></h2>
+<p>TYPO3 has a concept of “Page Title Providers”. The section “Page title”
+displays all registered providers that were checked for the current
+page. This helps to debug where the currently used page title is coming from.</p>
+</div>
+<div class="section" id="query-information">
+<h2>Query Information<a class="headerlink" href="#query-information" title="Permalink to this headline">¶</a></h2>
+<p>Displays a list of SQL queries that were generated on the current page and
+their performance.</p>
+<div class="figure" id="id4">
+<img alt="The Query tab of the Debug section" class="with-border" src="../../_images/Query.png"/>
+<p class="caption"><span class="caption-text">The <strong>Query</strong> tab of the Debug section of the Admin Panel</span></p>
+</div>
+<p>Click on a query to open a detail view with the values used for the
+placeholders.</p>
+<div class="figure" id="id5">
+<img alt="The values used in a query on the page" class="with-border" src="../../_images/QueryDetail.png"/>
+<p class="caption"><span class="caption-text">The values used in a query run on the page</span></p>
+</div>
+</div>
+</div>
+<!-- /body -->
+</div>
+</div>
+<!-- pager.html -->
+<nav aria-label="Page navigation example">
+<ul class="pagination justify-content-center">
+<li class="page-item">
+<a class="page-link" href="../Info/Index.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+</li>
+<li class="page-item">
+<a class="page-link" href="../../Settings/Index.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+</li>
+</ul>
+</nav>
+<!-- /pager.html -->
+</div>
+</div>
+</div>
+</div>
+<div class="page-footer">
+<!-- footer.html -->
+<footer>
+<div class="frame frame-ruler-before frame-background-dark">
+<div class="frame-container">
+<div class="frame-inner">
+<div class="footer-additional">
+<p class="text-center">Last rendered: Apr 28, 2021 04:16</p>
+<p class="text-center">
+<a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" rel="nofollow noopener" target="_blank">
+                            TYPO3 Theme 4.2.1
+                        </a>
+</p>
+</div>
+<div class="footer-meta">
+<div class="footer-meta-copyright">
+                        © Copyright by {extension.extensionKey}
+                    </div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- /footer.html -->
+</div>
+</div>
+<script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../../',
+            VERSION: '{extension.version}',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+<script src="../../_static/js/jquery.min.js" type="text/javascript"></script>
+<script src="../../_static/js/underscore.min.js" type="text/javascript"></script>
+<script src="../../_static/js/doctools.min.js" type="text/javascript"></script>
+<script src="../../_static/js/popper.min.js" type="text/javascript"></script>
+<script src="../../_static/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../_static/js/theme.min.js" type="text/javascript"></script>
+<script src="../../_static/language_data.js" type="text/javascript"></script>
+<script src="../../_static/js/searchtools.min.js" type="text/javascript"></script>
+<script src="../../_static/js/autocomplete.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+        jQuery(function() { Search.loadIndex("../../searchindex.js"); });
+    </script>
+<script id="searchindexloader" type="text/javascript"></script>
+<!-- scripts2 --><!-- /scripts2 -->
+<!-- footer2 --><!-- /footer2 -->
+</body>
+</html>
